@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Rakesh's career website </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content=width="device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        {{company_name}} decides the career of the employees in future
+      </h1>
+      <img class="img-fluid" id="banner" src="https://angrymenacingobjects--bathinirakesh9.repl.co/static/banner.jpeg.jpg"height="360">
+      <h2 class="text-center mt-2 mb-4">About Rakesh</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et risus quis erat aliquet dictum. Etiam vel massa gravida, molestie eros non, ornare lectus. Aenean volutpat nulla non elementum porttitor. Mauris bibendum sit amet ante a aliquet. Duis lobortis faucibus urna, ac efficitur urna blandit non. Ut sollicitudin nulla et justo semper, ac bibendum erat consectetur. Duis dapibus dapibus lorem, non efficitur velit efficitur non. Mauris faucibus in metus sed laoreet. Nullam id dignissim ligula. Vestibulum gravida eleifend tortor quis tincidunt. Etiam tempor et nisi ut pretium. Morbi aliquet mattis urna vel varius. Aliquam a mauris eu dolor placerat pellentesque vel eu orci. Donec dignissim leo orci, ut lacinia dolor ultrices sed. Suspendisse non magna lectus. Nam volutpat risus risus, eu condimentum est scelerisque at.
+      </p>
+  
+      <p class="lead"> 
+        Morbi pulvinar pellentesque iaculis. Vivamus in pharetra velit. Praesent sit amet efficitur ipsum. Aliquam mollis sapien sit amet quam tincidunt, sit amet convallis odio porttitor. Vivamus scelerisque felis id diam consectetur semper. Curabitur suscipit efficitur velit congue congue. In hac habitasse platea dictumst
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitems.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="lead mt-4">Copyright 2023, Rakesh</p>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
